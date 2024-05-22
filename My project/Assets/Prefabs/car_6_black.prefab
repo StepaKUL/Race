@@ -455,7 +455,7 @@ Transform:
   - {fileID: 6027101580947596204}
   - {fileID: 6027101579201710409}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &5613471335038512479
 Rigidbody:
@@ -518,7 +518,7 @@ MonoBehaviour:
     TrailOffset: {x: -0.1, y: 0.05, z: 0}
   COM: {fileID: 6027101580947596204}
   BackFireParticles:
-  - {fileID: 0}
+  - {fileID: 6027101579150069521}
   CarConfig:
     MaxSteerAngle: 42
     DriveType: 2

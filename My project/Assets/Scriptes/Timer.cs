@@ -7,11 +7,22 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     public TMP_Text timerText;
-    private float sec = 60;
+    public float sec = 60;
+    [SerializeField] float minSlip = 0.55f;
+    CarController CarController;
 
+    private void Awake()
+    {
+        CarController = GetComponent<CarController>();
+    }
     private void FixedUpdate()
     {
-        if (sec > 0)
+        if (CarController.CurrentMaxSlip > minSlip)
+        {
+            sec += Time.deltaTime;
+            timerText.text = Mathf.Round(sec).ToString();
+        }
+        else if (sec > 0)
         {
             sec -= Time.deltaTime;
             timerText.text = Mathf.Round(sec).ToString();
